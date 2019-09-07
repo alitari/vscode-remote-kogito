@@ -1,0 +1,22 @@
+{
+	"name": "Quarkus-Kogito",
+	"dockerFile": "Dockerfile",
+	"appPort": 8080,
+	"extensions": [
+		"vscjava.vscode-java-pack",
+		"redhat.vscode-xml",
+		"davidanson.vscode-markdownlint"
+	],
+	"runArgs": [
+		"-v",
+		"/var/run/docker.sock:/var/run/docker.sock"
+	],
+	"settings":{
+		"java.home": "/docker-java-home",
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"remote.extensionKind": {
+			"peterjausovec.vscode-docker": "workspace"
+		}
+	}
+
+}
