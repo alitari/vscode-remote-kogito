@@ -1,16 +1,16 @@
 {
 	"name": "Quarkus-Kogito",
-	"dockerFile": "Dockerfile",
-	"appPort": 8080,
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "devcontainer",
+	"appPort": 8021,
+	"workspaceFolder": "/workspaces/vscode-remote-kogito",
 	"extensions": [
 		"vscjava.vscode-java-pack",
 		"redhat.vscode-xml",
 		"davidanson.vscode-markdownlint"
 	],
-	"runArgs": [
-		"-v",
-		"/var/run/docker.sock:/var/run/docker.sock"
-	],
+	"runServices": ["devcontainer","infinispan"],
+
 	"settings":{
 		"java.home": "/docker-java-home",
 		"terminal.integrated.shell.linux": "/bin/bash",

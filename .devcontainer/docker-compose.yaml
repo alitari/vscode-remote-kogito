@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  devcontainer:
+    build:
+      context: .
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      # Update this to wherever you want VS Code to mount the folder of your project
+      - ..:/workspaces/vscode-remote-kogito
+    command: sleep infinity
+  infinispan:
+    image: jboss/infinispan-server:10.0.0.Beta3
+    environment:
+      - APP_USER=Alex
+      - APP_PASS=password
